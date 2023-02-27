@@ -1,4 +1,9 @@
 /* eslint-disable no-unused-vars */
-var character = 'mario';
-
+/* eslint-disable no-console */
+var character = 'luigi';
+console.log(character);
 var inputs = document.querySelectorAll('input');
+console.log(inputs);
+inputs.forEach(function (input) {
+  console.log(input);
+});
