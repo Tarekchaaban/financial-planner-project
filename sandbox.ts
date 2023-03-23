@@ -1,46 +1,32 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 
-//explicit types
-let character: string;
-let age: number;
-let isLoggedIn: boolean;
+let age: any = 25;
 
-//age = 'luigi';
-age = 30;
+age = true;
 
-// isLoggedIn = 25;
-isLoggedIn = true;
+console.log(age);
 
-//arrays
-let ninjas: string[] = [];
+age = 'hello';
 
-ninjas.push('yoshi');
-//union types
-let mixed: (string|number|boolean)[] = [];
-mixed.push('hello');
-mixed.push(20);
+console.log(age);
+
+age = { name: 'luigi' };
+
+console.log(age);
+
+let mixed: any[] = [];
+mixed.push(5);
+mixed.push('mario');
 mixed.push(false);
-
 console.log(mixed);
 
-let uid: string|number;
+let ninja: { name: any, age: any };
 
-uid = '123';
-uid = 123;
+ninja = { name: 'yoshi', age: 25 };
 
-//objects
-let ninjaOne: object;
-ninjaOne = { name: 'yoshi', age: 30 }
+console.log(ninja);
 
-let ninjaTwo: {
-  name: string,
-  age: number,
-  beltColour: string,
-}
+ninja = { name: 25, age: 'yoshi' };
 
-ninjaTwo = {
-  name: 'mario',
-  age: 20,
-  beltColour: 'black',
-}
+console.log(ninja);
