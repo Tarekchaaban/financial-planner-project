@@ -1,13 +1,9 @@
 'use strict';
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
-let greet;
-const add = (a, b, c = 10) => {
-  console.log(a + b);
-  console.log(c);
+const logDetails = (uid, item) => {
+  console.log(`${item} has a uid of ${uid}`);
 };
-add(5, 10, '20');
-const minus = (a, b) => {
-  return a + b;
+const greet = user => {
+  console.log(`${user.name} says hello`);
 };
-const result = minus(10, 7);
