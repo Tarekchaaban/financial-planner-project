@@ -1,32 +1,17 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
+let greet: Function;
 
-let age: any = 25;
 
-age = true;
+const add = (a: number, b: number, c: number | string = 10) => {
+  console.log(a + b);
+  console.log(c);
+}
 
-console.log(age);
+add(5, 10, '20');
 
-age = 'hello';
+const minus = (a: number, b: number): number => {
+  return a + b;
+}
 
-console.log(age);
-
-age = { name: 'luigi' };
-
-console.log(age);
-
-let mixed: any[] = [];
-mixed.push(5);
-mixed.push('mario');
-mixed.push(false);
-console.log(mixed);
-
-let ninja: { name: any, age: any };
-
-ninja = { name: 'yoshi', age: 25 };
-
-console.log(ninja);
-
-ninja = { name: 25, age: 'yoshi' };
-
-console.log(ninja);
+let result = minus(10, 7);
