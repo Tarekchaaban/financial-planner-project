@@ -4,10 +4,10 @@
 /* eslint-disable prefer-const */
 // classes
 class Invoice {
-  constructor(c, d, a) {
-    this.client = c;
-    this.details = d;
-    this.amount = a;
+  constructor(client, details, amount) {
+    this.client = client;
+    this.details = details;
+    this.amount = amount;
   }
 
   format() {
@@ -20,7 +20,7 @@ let invoices = [];
 invoices.push(invOne);
 invoices.push(invTwo);
 invoices.forEach(inv => {
-  console.log(inv.client, inv.details, inv.amount, inv.format());
+  console.log(inv.client, inv.amount, inv.format());
 });
 const anchor = document.querySelector('a');
 // const form = document.querySelector('form')!;
