@@ -1,6 +1,33 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 /* eslint-disable prefer-const */
+
+//interfaces
+interface isPerson {
+  name: string;
+  age: number;
+  speak(a: string): void;
+  spend(a: number): number;
+}
+
+const me: isPerson = {
+  name: 'Tarek',
+  age: 25,
+  speak(text: string): void {
+    console.log(text);
+  },
+  spend(amount: number): number {
+    console.log('I spent', amount);
+    return amount;
+  }
+}
+
+const greetPerson = (person: isPerson) => {
+console.log('hello', person.name);
+}
+greetPerson(me);
+let someone: isPerson;
+console.log(me);
 import {Invoice} from './classes/Invoice.js'
 
 const invOne = new Invoice('mario', 'work on the mario website', 250);
